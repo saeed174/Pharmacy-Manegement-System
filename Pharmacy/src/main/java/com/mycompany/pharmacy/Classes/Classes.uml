@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.Classes</OriginalElement>
+  <nodes>
+    <node x="892.5" y="-14.0">com.example.Classes.HealthCare</node>
+    <node x="991.0" y="521.0">com.example.Classes.Recipe</node>
+    <node x="131.5" y="1946.5">com.example.Classes.Delivary</node>
+    <node x="-97.5" y="738.5">com.example.Classes.Person</node>
+    <node x="661.5" y="853.5">com.example.Classes.Medicine</node>
+    <node x="-101.0" y="1257.0">com.example.Classes.PharmacyEmployee</node>
+    <node x="542.0" y="1958.0">com.example.Classes.Order</node>
+    <node x="603.5" y="49.0">com.example.Classes.Product</node>
+    <node x="336.5" y="521.0">com.example.Classes.Cosmetic</node>
+    <node x="344.5" y="1349.0">com.example.Classes.Customer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.Classes.Recipe" target="com.example.Classes.HealthCare" relationship="REALIZATION">
+      <point x="105.0" y="-99.0" />
+      <point x="1306.0" y="480.0" />
+      <point x="961.0" y="480.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.Classes.Customer" target="com.example.Classes.Person" relationship="GENERALIZATION">
+      <point x="0.0" y="-191.0" />
+      <point x="541.0" y="1200.0" />
+      <point x="101.0" y="1200.0" />
+      <point x="0.0" y="201.5" />
+    </edge>
+    <edge source="com.example.Classes.Cosmetic" target="com.example.Classes.Product" relationship="GENERALIZATION">
+      <point x="0.0" y="-99.0" />
+      <point x="541.0" y="500.0" />
+      <point x="761.0" y="500.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+    <edge source="com.example.Classes.Medicine" target="com.example.Classes.HealthCare" relationship="REALIZATION">
+      <point x="99.75" y="-86.5" />
+      <point x="960.75" y="480.0" />
+      <point x="961.0" y="480.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.Classes.Delivary" target="com.example.Classes.PharmacyEmployee" relationship="GENERALIZATION">
+      <point x="0.0" y="-133.5" />
+      <point x="321.0" y="1220.0" />
+      <point x="101.0" y="1220.0" />
+      <point x="0.0" y="-283.0" />
+    </edge>
+    <edge source="com.example.Classes.Recipe" target="com.example.Classes.Product" relationship="GENERALIZATION">
+      <point x="-105.0" y="-99.0" />
+      <point x="1096.0" y="500.0" />
+      <point x="761.0" y="500.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+    <edge source="com.example.Classes.PharmacyEmployee" target="com.example.Classes.Person" relationship="GENERALIZATION">
+      <point x="0.0" y="-283.0" />
+      <point x="0.0" y="201.5" />
+    </edge>
+    <edge source="com.example.Classes.Medicine" target="com.example.Classes.Product" relationship="GENERALIZATION">
+      <point x="-99.75" y="-86.5" />
+      <point x="761.25" y="500.0" />
+      <point x="761.0" y="500.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.3011565836298932" showDependencies="false" x="665.0000000000002" y="1110.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

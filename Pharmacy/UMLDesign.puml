@@ -1,0 +1,140 @@
+@startuml
+' Set direction top to bottom
+left to right direction
+
+' Interfaces and Abstract Classes
+interface Sortable {
+    +compareTo(p: Product): int
+}
+
+abstract class Person {
+    -name: String
+    -age: int
+    -gender: String
+    -email: String
+    -telephoneNumber: String
+    -insuranceCompany: String
+    -insuranceNumber: String
+
+    +getName(): String
+    +getAge(): int
+    +getGender(): String
+    +getEmail(): String
+    +getPhoneNumber(): String
+    +getInsuranceCompany(): String
+    +getInsuranceNumber(): String
+}
+
+' Main Product Class
+class Product {
+    -name: String
+    -id: String
+    -cost: double
+    -expireDate: String
+    -quantity: int
+
+    +getName(): String
+    +getID(): String
+    +getCost(): double
+    +getExpireDate(): String
+    +getQuantity(): int
+    +compareTo(p: Product): int
+}
+
+Product ..|> Sortable
+
+' Product Subclasses
+class Medicine {
+    -Medicine_type: String
+    -Medicine_company: String
+    -Medicine_dose: String
+
+    +getType(): String
+    +getCompany(): String
+    +getDose(): String
+}
+Product <|-- Medicine
+
+class Cosmetic {
+    -cosmeticType: String
+    -brand: String
+
+    +getCosmeticType(): String
+    +getBrand(): String
+}
+Product <|-- Cosmetic
+
+class Recipe {
+    -recipeType: String
+    -Pharmacist: PharmacyEmployee
+
+    +getRecipeType(): String
+    +getPharmacist(): PharmacyEmployee
+}
+Product <|-- Recipe
+
+' People
+class PharmacyEmployee {
+    -position: String
+    -workingHours: float
+    -workingShift: String
+    -employeeId: String
+    -salary: float
+
+    +getPosition(): String
+    +getWorkingShift(): String
+    +getEmployeeId(): String
+    +getSalary(): float
+    +calculateBonus(): float
+}
+PharmacyEmployee --|> Person
+
+class Delivery {
+    -currentOrder: Order
+    -customerAddress: String
+    -deliveryDate: String
+
+    +setCurrentOrder(order: Order)
+    +setCustomerAddress(address: String)
+    +setDeliveryDate(date: String)
+    +DeliverOrder()
+}
+Delivery --|> PharmacyEmployee
+Delivery --> Order
+
+class Customer {
+    -customerID: String
+    -address: String
+    -point: int
+
+    +addPoints(point: int)
+    +getPoints(): int
+    +getCustomerID(): String
+    +getAddress(): String
+}
+Customer --|> Person
+
+' Order Class
+class Order {
+    -products: Map<Product, Integer>
+    -customer: Customer
+    -TypeOfPayment: String
+
+    +getCustomer(): Customer
+    +setCustomer(customer: Customer)
+    +AddProducts(product: Product)
+    +RemoveProducts(product: Product)
+    +CalculateTotal(): int
+    +CalculateCost(): double
+    +DisplayOrder()
+    +SetTypeOfPayment(type: String)
+}
+
+Order --> Customer
+Order --> Product
+Recipe --> PharmacyEmployee
+
+
+
+
+@enduml
